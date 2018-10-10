@@ -92,6 +92,9 @@ module.exports = device => {
             listeners[type] = listeners[type].filter(function(listener) {
                 return listener !== callback;
             });
+        },
+        removeAllListeners(type) {
+            listeners[type] = [];
         }
     };
 };
